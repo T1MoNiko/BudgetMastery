@@ -1,0 +1,23 @@
+.transactionTable {
+    width: 100%;
+    font-size: 16px;
+    table-layout: fixed;
+    height:fit-content;
+}
+.transactionItems tr:nth-child(odd) {
+    background-color: #151a39;
+    text-align: center;
+}
+.transactionItems tr {
+    width: 100%;
+    display: table-row;
+}
+.overflow {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+}
+.overflow::-webkit-scrollbar {
+    display: none;
+}

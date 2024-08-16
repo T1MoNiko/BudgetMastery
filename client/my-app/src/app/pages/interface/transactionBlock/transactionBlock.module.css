@@ -1,0 +1,26 @@
+.transactionBtn {
+    display: block;
+    padding: 5px 10px;
+    background: rgb(144, 45, 194);
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    margin-top: 20px;
+}
+.transactionBtn:hover {
+    background: rgb(135 34 167);
+}   
+.transactionInput {
+    width: 60%;
+    margin-top: 20px;
+    background-color: #151a39;
+    padding: 0 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 2px solid #51368e;
+}
+.transactionInput::placeholder {
+    font-size: 14px;
+    color: rgb(130, 130, 130);
+}
