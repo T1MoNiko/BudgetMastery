@@ -15,6 +15,8 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState<Status>(Status.LOADING)
   const localSt = (() => typeof window !== 'undefined' ? localStorage : null)()
   
+  console.log("Проверка ci/cd")
+
   useEffect(() => {
       (async () => {
         await setState(localSt?.getItem('access_token'))
