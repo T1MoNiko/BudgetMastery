@@ -30,7 +30,7 @@ export const TransactionTable = () => {
                     <tbody className={transactionTableStyles.transactionItems}>
                         {transactions?.length ? transactions.map(item => (
                             <tr key={item.id} className="">
-                                <td>{capitalizeFirstLetter(item.name)}</td>
+                                <td>{capitalizeFirstLetter(item.transaction)}</td>
                                 <td>{item.category_name ? capitalizeFirstLetter(item.category_name) : '—'}</td>
                                 <td>{item.count}$</td>
                             </tr>

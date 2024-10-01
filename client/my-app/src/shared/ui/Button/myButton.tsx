@@ -4,17 +4,15 @@ import React, { MouseEventHandler } from "react";
 interface ButtonProps {
     children: React.ReactNode,
     className: string,
-    func?: any,
+    onClick: MouseEventHandler<HTMLButtonElement>,
 }
 
 export const MyButton = (props: ButtonProps) => {
-    const { children, className, func } = props;
+    const { children } = props;
 
     return (
         <>
-        <button onClick={func ? func : () => {}}  
-                className={className}
-        >{children}</button>
+        <button {...props}>{children}</button>
     </>
     )
 }

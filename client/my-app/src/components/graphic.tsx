@@ -12,7 +12,7 @@ const MyDoughnutChart = () => {
 
   const transactions = useAppSelector(state => state.transactions)
 
-  const namesOfTransactions: any = transactions?.length ? transactions.map(item => item.name) : ['nothing']
+  const namesOfTransactions: any = transactions?.length ? transactions.map(item => item.transaction) : ['nothing']
   const countOfTransactions: any = transactions?.length ? transactions.map(item => item.count) : [0]
   const totalCount = countOfTransactions ? countOfTransactions.reduce((acc: number, next: number) => acc + next, 0) : 0
 

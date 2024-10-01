@@ -1,8 +1,8 @@
 export interface Transaction {
     id: number | null | string,
-    name: string,
+    transaction: string,
     category_id?: number,
-    count: number | null,
+    count: number,
     category_name?: string,
     createdAt?: Date,
     updatedAt?: Date,

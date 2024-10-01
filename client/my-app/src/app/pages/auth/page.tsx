@@ -2,8 +2,8 @@
 
 import React, { ChangeEventHandler, MouseEventHandler, useState } from "react";
 
-import { MyButton } from "@/components/myButton";
-import { MyInput } from "@/components/myInput";
+import { MyButton } from "@/shared/ui/Button/myButton";
+import { MyInput } from "@/shared/ui/Input/myInput";
 
 import styles from './style.module.css'
 import { instance } from "@/app/utils/axiosSettings";
@@ -67,24 +67,28 @@ const Auth = ({setData}: {setData: Function}) => {
         <main className="h-screen flex place-content-center items-center">
             <form className={styles.regModel}>
                 <h1 className="text-white text-center text-2xl mt-10">Регистрация</h1>
-                <MyInput placeholderText="Введите имя" 
-                          type="text" 
-                          func={handleChange}
-                          className={styles.regModel__input}
-                          />
-                <MyInput placeholderText="Введите email" 
-                          type="email"
-                          func={handleChange}
-                          className={styles.regModel__input}
-                          />
-                <MyInput placeholderText="Введите пароль" 
-                          type="password" 
-                          func={handleChange}
-                          className={styles.regModel__input}
-                          />
-                <MyButton className={styles.regModel__btn}
-                          func={clickHandler}
-                          >Зарегистрировать</MyButton>
+                <MyInput 
+                    placeholder="Введите имя" 
+                    type="text" 
+                    onChange={handleChange}
+                    className={styles.regModel__input}
+                />
+                <MyInput 
+                    placeholder="Введите email" 
+                    type="email"
+                    onChange={handleChange}
+                    className={styles.regModel__input}
+                />
+                <MyInput 
+                    placeholder="Введите пароль" 
+                    type="password" 
+                    onChange={handleChange}
+                    className={styles.regModel__input}
+                />
+                <MyButton 
+                    className={styles.regModel__btn}
+                    onClick={clickHandler}
+                >Зарегистрировать</MyButton>
             </form>
         </main>
     )

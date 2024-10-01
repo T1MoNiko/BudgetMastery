@@ -1,7 +1,7 @@
 import { Category, TransactionsAndCategories } from "@/app/types/types";
 import { instance } from "@/app/utils/axiosSettings";
-import { MyButton } from "@/components/myButton";
-import { MyInput } from "@/components/myInput";
+import { MyButton } from "@/shared/ui/Button/myButton";
+import { MyInput } from "@/shared/ui/Input/myInput";
 import React, { ChangeEventHandler, MouseEventHandler, SetStateAction, useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import styles from "@/app/pages/interface/style.module.css"
