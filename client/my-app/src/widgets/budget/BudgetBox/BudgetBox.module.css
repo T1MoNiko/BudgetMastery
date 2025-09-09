@@ -1,0 +1,32 @@
+.container {
+    border-radius: 20px;
+    border: 2px solid #39424f;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+.title {
+    color: white;
+    font-weight: 600;
+}
+
+.amountBox {
+    align-items: end;
+    display: flex;
+    color: white;
+}
+
+.remainderAmount {
+    font-size: 25px;
+    line-height: 100%;
+}
+
+.amount {
+    font-size: 11px;
+    color: #7c7c7c ;
+}

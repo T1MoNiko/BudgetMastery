@@ -1,0 +1,30 @@
+.transactionBtn {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    margin-top: 20px;
+    outline: none;
+}
+.transactionBtn:hover {
+    filter: brightness(0.9);
+}   
+.transactionInput {
+    width: 60%;
+    margin-top: 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+.transactionInput::placeholder {
+    font-size: 14px;
+    color: rgb(130, 130, 130);
+}
+@media screen and (max-width: 450px) {
+    .transactionBlock {
+        grid-column: span 2;
+    }
+}

@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int           @id @default(autoincrement())
+  name         String
+  email        String        @unique
+  password     String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @default(now()) @updatedAt
+  categories   Category[]
+  transactions Transaction[]
+  role         Role          @relation(fields: [role_id], references: [id])
+  role_id      Int
+}
+
+model Role {
+  id           Int           @id @default(autoincrement())
+  name         String        @unique
+  users        User[]
+}
+/////////////// накинуть связи
+model Goal {
+  id           Int           @id @default(autoincrement())
+  name         String
+  deadline     DateTime
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @default(now()) @updatedAt
+}
+
+model Reminder {
+  id              Int           @id @default(autoincrement())
+  title           String
+  deadline        DateTime
+  reminder_date   DateTime
+  is_active       Boolean
+  createdAt    DateTime      @default(now())
+}
+////////////////
+model Category {
+  name         String        @map("category_name")
+  user_id      Int
+  id           String        @id @map("category_id")
+  user         User          @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  transactions Transaction[]
+}
+
+model Transaction {
+  id            String    @id @map("transaction_id")
+  name          String    @map("transaction_name")
+  category_id   String?
+  category_name String?
+  createdAt     DateTime  @default(now())
+  user_id       Int
+  count         Int
+  category      Category? @relation(fields: [category_id], references: [id])
+  user          User      @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}

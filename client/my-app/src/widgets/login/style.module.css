@@ -1,0 +1,51 @@
+.regModel {
+    width: 350px;
+    height: 360px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.regModel > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.regModel__btn {
+    padding: 8px 15px; 
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.regModel__input {
+    margin: 30px 0 0 0;
+    padding: 8px 15px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+.regModel__input::placeholder {
+    padding: 5px 0;
+}
+.passwordBox {
+    width: 80%;
+    text-align: start;
+}
+.passwordBox > input {
+    width: 100%;
+}
+.passwordBox > p {
+    margin-top: 7px;
+    color: #b5b5b5;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+}
+.text {
+    margin-top: 10px;
+    color: #b5b5b5;
+}

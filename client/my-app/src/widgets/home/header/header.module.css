@@ -1,0 +1,21 @@
+.logo {
+    display: flex;
+    font-size: 25px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    gap: 10px
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    height: 10%;
+    background: #2d325c;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 8px;
+}

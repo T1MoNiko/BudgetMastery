@@ -1,0 +1,40 @@
+.transactionTable {
+    width: 100%;
+    font-size: 16px;
+    table-layout: fixed;
+    height:fit-content;
+}
+.transactionItems tr:nth-child(odd) {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.transactionItems tr {
+    width: 100%;
+    display: table-row;
+}
+.overflow {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+}
+.overflow::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .transactionBlock {
+        grid-column: span 1;
+        grid-row: span 1;
+        max-height: 250px;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .transactionBlock {
+        grid-row: span 1;
+        max-height: 250px;
+        grid-column: span 2;
+    }
+}
